@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IMAHE EDITOR</title>
+</head>
+<body>
+    <header>
+        <input type="file" id="fileUpload">
+    </header>
+
+    <nav>
+        <h1>JS IMAGE EDITOR &#127912;</h1>
+
+        <div class="filter-group">
+            <label for="brigntenss">Brightness</label>
+            <input type="range" id="brightness" min="0" max="200" value="100" oninput="setFilter(this)">
+            <p class="filter-value">100</p>
+        </div>
+
+        <div class="filter-group">
+            <label for="saturate">Saturate</label>
+            <input type="range" id="saturate" min="0" max="200" value="100" oninput="setFilter(this)">
+            <p class="filter-value">100</p>
+        </div>
+
+        <div class="filter-group">
+            <label for="invert">Invert</label>
+            <input type="range" id="invert" min="0" max="100" value="0" oninput="setFilter(this)">
+            <p class="filter-value">0</p>
+        </div>
+
+        <div class="filter-group">
+            <label for="blur">Blur</label>
+            <input type="range" id="blur" min="0" max="10" value="0" oninput="setFilter(this)">
+            <p class="filter-value">0</p>
+        </div>
+    </nav>
+
+    <div id="imgGroup">
+        <canvas id="imgBox"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
